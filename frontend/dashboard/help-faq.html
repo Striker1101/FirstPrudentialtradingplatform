@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .btn1 {
+        background-color: rgba(55, 166, 239, 0.15);
+        color: white;
+      }
+
+      .btn1:hover {
+        background-color: #f44336;
+        color: white;
+      }
+
+      .btn2 {
+        background-color: rgba(55, 166, 239, 0.15);
+        color: white;
+      }
+
+      .btn2:hover {
+        background-color: #4caf50;
+        color: white;
+      }
+    </style>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="HTML5 Template" />
+    <meta
+      name="description"
+      content="First Prudential Trading Platform - Best ICO & Cryptocurrency Company"
+    />
+    <meta name="author" content="potenzaglobalsolutions.com" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <title>Help - Faq | First Prudential Trading Platform</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/images/favicon.png" />
+
+    <!-- Font -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins:200,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+      integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- balancepopupmodal start -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="js/ogs.js"></script>
+
+    <!-- balancepopupmodal end -->
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <nav
+        class="admin-header navbar navbar-default col-lg-12 col-12 p-0 fixed-top d-flex flex-row"
+      >
+        <!-- logo -->
+        <div class="text-left navbar-brand-wrapper">
+          <a class="navbar-brand brand-logo" href="index"
+            ><img
+              src="images/logo.png"
+              alt="logo"
+              style="width: 145px; height: 35px"
+          /></a>
+          <a class="navbar-brand brand-logo-mini" href="index"
+            ><img
+              src="images/logo.png"
+              alt="logo"
+              style="width: 40px; height: 40px"
+          /></a>
+        </div>
+        &nbsp;&nbsp;
+        <!-- Top bar left -->
+        <ul class="nav navbar-nav mr-auto">
+          <li class="nav-item">
+            <a
+              id="button-toggle"
+              class="button-toggle-nav inline-block ml-20 pull-left"
+              href="javascript:void(0);"
+            >
+              <i class="fa-solid fa-bars"></i
+            ></a>
+          </li>
+        </ul>
+        <!-- top bar right -->
+        <ul class="nav navbar-nav ml-auto">
+          <li class="nav-item dropdown nav-link top-nav fullscreen">
+            <font size="3px">Welcome, <span class="user_name"></span> </font>
+          </li>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <!-- <li class="nav-item nav-link top-nav dropdown">
+        <font size="3px" color="#ff9900">BTC:&nbsp; 
+           
+        </font>
+    </li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+          <li class="nav-item nav-link top-nav dropdown">
+            <strong>
+              <i
+                class="fa fa-money"
+                style="font-size: 18px; color: #47d147"
+              ></i>
+              <font size="3px" color="#47d147">
+                <span class="account_currency">$</span
+                ><span class="account_balance">0.00 </span>
+              </font>
+            </strong>
+          </li>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </ul>
+      </nav>
+      <!--=================================
+ header End-->
+
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Left Sidebar start-->
+          <div class="side-menu-fixed">
+            <div class="scrollbar side-menu-bg">
+              <ul class="nav navbar-nav side-menu" id="sidebarnav">
+                <!-- menu item Dashboard-->
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    data-toggle="collapse"
+                    data-target="#dashboard"
+                  >
+                    <div class="pull-left">
+                      <i class="fa-solid fa-arrow-trend-up"></i
+                      ><span class="right-nav-text">Forex Markets</span>
+                    </div>
+                    <div class="pull-right">
+                      <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="clearfix"></div>
+                  </a>
+                  <ul id="dashboard" class="collapse" data-parent="#sidebarnav">
+                    <li><a href="/">Client Area</a></li>
+                    <li><a href="./forex.html">Forex</a></li>
+                    <li><a href="./cfd.html">CFD</a></li>
+                    <li><a href="./cryptocurrency.html">Cryptocurrency</a></li>
+                    <li><a href="./stock.html">Stock</a></li>
+                    <li><a href="./futures.html">Futures</a></li>
+                  </ul>
+                </li>
+                <!--<li>
+          <a href="../bitcoin-mining">
+            <div class="pull-left"><i class="fa fa-btc" style="font-size:20px"></i><span class="right-nav-text">Bitcoin Mining</span></div>
+            <div class="pull-right"></div><div class="clearfix"></div>
+          </a>
+        </li>-->
+                <li>
+                  <a href="./deposit.html">
+                    <div class="pull-left">
+                      <i class="fa-solid fa-wallet"></i
+                      ><span class="right-nav-text">Deposit Funds</span>
+                    </div>
+                    <div class="pull-right"></div>
+                    <div class="clearfix"></div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./withdraw-funds.html">
+                    <div class="pull-left">
+                      <i class="fa-solid fa-wallet"></i
+                      ><span class="right-nav-text">Withdraw Funds</span>
+                    </div>
+                    <div class="pull-right"></div>
+                    <div class="clearfix"></div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./funds-history.html">
+                    <div class="pull-left">
+                      <i class="fa-solid fa-receipt"></i
+                      ><span class="right-nav-text">Funds History</span>
+                    </div>
+                    <div class="pull-right"></div>
+                    <div class="clearfix"></div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./trading-hours.html">
+                    <div class="pull-left">
+                      <i class="fa-solid fa-clock-rotate-left"></i
+                      ><span class="right-nav-text">Trading Hours</span>
+                    </div>
+                    <div class="pull-right"></div>
+                    <div class="clearfix"></div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./account-types.html">
+                    <div class="pull-left">
+                      <i class="fa-solid fa-cube"></i
+                      ><span class="right-nav-text">Account Types</span>
+                    </div>
+                    <div class="pull-right"></div>
+                    <div class="clearfix"></div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./help-faq.html">
+                    <div class="pull-left">
+                      <i class="fa-solid fa-question"></i
+                      ><span class="right-nav-text">Help - FAQ</span>
+                    </div>
+                    <div class="pull-right"></div>
+                    <div class="clearfix"></div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./user-profile.html">
+                    <div class="pull-left">
+                      <i class="fa-solid fa-users"></i
+                      ><span class="right-nav-text">User Profile</span>
+                    </div>
+                    <div class="pull-right"></div>
+                    <div class="clearfix"></div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./contact-us.html">
+                    <div class="pull-left">
+                      <i class="fa-solid fa-location-dot"></i
+                      ><span class="right-nav-text">Contact Us</span>
+                    </div>
+                    <div class="pull-right"></div>
+                    <div class="clearfix"></div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" id="logout">
+                    <div class="pull-left">
+                      <i class="fa-solid fa-unlock"></i
+                      ><span class="right-nav-text">Sign Out</span>
+                    </div>
+                    <div class="pull-right"></div>
+                    <div class="clearfix"></div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Left Sidebar End-->
+
+          <!--=================================
+wrapper -->
+
+          <div class="content-wrapper">
+            <div class="page-title">
+              <div class="row">
+                <div class="col-sm-6">
+                  <h4 class="mb-0">Help - FAQ</h4>
+                </div>
+                <div class="col-sm-6">
+                  <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right">
+                    <li class="breadcrumb-item">
+                      <a href="#" class="default-color">Home</a>
+                    </li>
+                    <li class="breadcrumb-item">FAQ</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+            <!-- main body -->
+            <div class="row">
+              <div class="col-xl-6 mb-30">
+                <div class="card card-statistics h-100">
+                  <div class="card-body">
+                    <div class="accordion">
+                      <div class="acd-group acd-active">
+                        <a href="#" class="acd-heading"
+                          >Can I update my personal information?</a
+                        >
+                        <div class="acd-des">
+                          If you wish to update your personal information,
+                          please send an email to
+                          <a
+                            href="/cdn-cgi/l/email-protection"
+                            class="__cf_email__"
+                            data-cfemail="8ffcfaffffe0fdfbcfe9e6e1fffde0edfaa1ece0e2"
+                            >[email&#160;protected]</a
+                          >
+                          from your registered email address.
+                        </div>
+                      </div>
+                      <div class="acd-group">
+                        <a href="#" class="acd-heading"
+                          >What is the minimum fund I can deposit into my
+                          account?</a
+                        >
+                        <div class="acd-des">
+                          Minimum deposit into a new account is 200 USD (Basic
+                          Account Type)
+                        </div>
+                      </div>
+                      <div class="acd-group">
+                        <a href="#" class="acd-heading"
+                          >What is the safety of my funds with Financial
+                          Protection Bureau?</a
+                        >
+                        <div class="acd-des">
+                          First Prudential Trading Platform maintains isolated
+                          client accounts to ensure that client funds are fully
+                          segregated from First Prudential Trading Platform own
+                          funds at all times. Client accounts have the required
+                          coding to ensure that they are used for clients’
+                          funding purposes. All client funds deposited at
+                          Financial Protection Bureau are completely separated
+                          following our strict policies and procedures, with
+                          activities monitored and reviewed by our external and
+                          internal auditors. As a client, you can be assured
+                          that your funds are safe.
+                        </div>
+                      </div>
+                      <div class="acd-group">
+                        <a href="#" class="acd-heading"
+                          >How much money can I make trading?</a
+                        >
+                        <div class="acd-des">
+                          The amount of money you can make depends on how much
+                          you are willing to risk and what products you decide
+                          to trade. A key to a winning trading strategy is to
+                          minimise your risk through our guaranteed stop loss
+                          feature. However, forex trading is risky and there are
+                          no guarantees.
+                        </div>
+                      </div>
+                      <div class="acd-group">
+                        <a href="#" class="acd-heading"
+                          >Can I change the base currency of my account?</a
+                        >
+                        <div class="acd-des">
+                          It is not possible to change the base currency of your
+                          account, however you can open a new account at any
+                          time (with a different email address) and then specify
+                          your preferred base currency.
+                        </div>
+                      </div>
+                      <div class="acd-group">
+                        <a href="#" class="acd-heading"
+                          >What trading account types do you offer?</a
+                        >
+                        <div class="acd-des">
+                          We offer the following trading account types:
+                          <br /><br />
+
+                          Basic Account:&nbsp; $200 Minimum Deposit <br /><br />
+                          Classic Account:&nbsp; $1,000 Minimum Deposit
+                          <br /><br />
+                          Standard Account:&nbsp; $2,500 Minimum Deposit
+                          <br /><br />
+                          Premium Account:&nbsp; $5,000 Minimum Deposit
+                          <br /><br />
+                          VIP Account:&nbsp; $10,000 Minimum Deposit
+                          <br /><br />
+                        </div>
+                      </div>
+                      <div class="acd-group">
+                        <a href="#" class="acd-heading"
+                          >Can I open more than one trading account?</a
+                        >
+                        <div class="acd-des">
+                          No, clients are not allowed to have more than one
+                          trading account.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 mb-30">
+                <div class="card card-statistics h-100">
+                  <div class="card-body">
+                    <div class="accordion">
+                      <div class="acd-group">
+                        <a href="#" class="acd-heading"
+                          >What payment options do I have to deposit / withdraw
+                          funds?</a
+                        >
+                        <div class="acd-des">
+                          We offer a wide range of payment options for
+                          deposits/withdrawals: bitcoin, paypal, ethereum and
+                          other payment methods. As soon as you open a trading
+                          account, you can log in to our Members Area, select a
+                          payment method of your preference on the Deposit funds
+                          & Withdrawal funds pages.
+                        </div>
+                      </div>
+                      <div class="acd-group">
+                        <a href="#" class="acd-heading"
+                          >Do you accept US clients?</a
+                        >
+                        <div class="acd-des">
+                          Yes, we accept clients from the United States.
+                        </div>
+                      </div>
+                      <div class="acd-group">
+                        <a href="#" class="acd-heading"
+                          >Do you offer binary option trading</a
+                        >
+                        <div class="acd-des">Yes, we do.</div>
+                      </div>
+                      <div class="acd-group">
+                        <a href="#" class="acd-heading"
+                          >In which currencies can I deposit funds into my
+                          trading account?</a
+                        >
+                        <div class="acd-des">
+                          You can deposit money in any currency and it will be
+                          automatically converted into the base currency of your
+                          account, by First Prudential Trading Platform
+                          prevailing inter-bank price.
+                        </div>
+                      </div>
+                      <div class="acd-group">
+                        <a href="#" class="acd-heading"
+                          >What is the withdrawal priority procedure?</a
+                        >
+                        <div class="acd-des">
+                          In order to protect all parties against fraud and
+                          minimise the possibility of money laundering and/or
+                          terrorist financing, First Prudential Trading Platform
+                          will only process withdrawal back to the source of the
+                          original deposit according to the Withdrawal Priority
+                          Procedure below: <br /><br />
+
+                          * Credit/debit card withdrawals. Withdrawal requests
+                          submitted, regardless of the withdrawal method chosen,
+                          will be processed via this channel up to the total
+                          amount deposited by this method. <br /><br />
+
+                          * E-wallet withdrawals. E-wallet refunds/withdrawals
+                          will be processed once all Credit/Debit card deposits
+                          have been completely refunded. <br /><br />
+
+                          * Other Methods. All other methods such as bank wire
+                          withdrawals shall be used once deposits made with the
+                          above two methods have been completely exhausted.
+                          <br /><br />
+
+                          All withdrawal requests will be completed within 24
+                          working hours; however all withdrawal requests
+                          submitted will be instantly reflected in the clients’
+                          trading account as pending withdrawals. In case a
+                          client selects an incorrect withdrawal method, the
+                          clients’ request will be processed according to the
+                          Withdrawal Priority Procedure described above. All
+                          client withdrawal requests shall be processed in the
+                          currency in which the deposit was originally made.
+                          Should the deposit currency differ from the transfer
+                          currency, the transfer amount will be converted by
+                          First Prudential Trading Platform into the transfer
+                          currency at the prevailing exchange rate.
+                        </div>
+                      </div>
+                      <div class="acd-group">
+                        <a href="#" class="acd-heading"
+                          >Can I withdraw my funds whenever I want?</a
+                        >
+                        <div class="acd-des">
+                          Requests for withdrawals can be made at any time via
+                          the First Prudential Trading Platform website. The
+                          requests will be processed immediately, and during the
+                          relevant financial institutions’ business hours.
+                        </div>
+                      </div>
+                      <div class="acd-group">
+                        <a href="#" class="acd-heading"
+                          >How long does it take to receive my funds after I
+                          make a withdrawal request?</a
+                        >
+                        <div class="acd-des">
+                          Your withdrawal request is processed by our back
+                          office within 24 hours. Via any e-wallet methods you
+                          will receive your money on the same day, and via bank
+                          wire or credit/debit card it usually takes 2 - 5
+                          business days.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <footer class="p-4">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="text-center text-md-left">
+                    <p class="mb-0">
+                      <a href="#">First Prudential Trading Platform</a> &copy;
+                      2022. &nbsp;All Rights Reserved.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <ul class="text-center text-md-right">
+                    <li class="list-inline-item">
+                      <a href="index" target="_blank">Terms & Conditions </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="index" target="_blank">Privacy Policy </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="index" target="_blank">Safety of Funds </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </footer>
+          </div>
+          <!-- main content wrapper end-->
+        </div>
+      </div>
+    </div>
+    <!--=================================
+ footer -->
+
+    <!--=================================
+ jquery -->
+    <!-- jquery -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <!-- plugins-jquery -->
+    <script src="js/plugins-jquery.js"></script>
+
+    <!-- plugin_path -->
+    <script>
+      var plugin_path = "js/";
+    </script>
+
+    <!-- chart -->
+    <script src="js/chart-init.js"></script>
+
+    <!-- calendar -->
+    <script src="js/calendar.init.js"></script>
+
+    <!-- charts sparkline -->
+    <script src="js/sparkline.init.js"></script>
+
+    <!-- charts morris -->
+    <script src="js/morris.init.js"></script>
+
+    <!-- datepicker -->
+    <script src="js/datepicker.js"></script>
+
+    <!-- sweetalert2 -->
+    <script src="js/sweetalert2.js"></script>
+
+    <!-- toastr -->
+    <script src="js/toastr.js"></script>
+
+    <!-- validation -->
+    <script src="js/validation.js"></script>
+
+    <!-- lobilist -->
+    <script src="js/lobilist.js"></script>
+
+    <!-- custom -->
+    <script src="../util/general.js"></script>
+    <script src="../util/apiRequest.js"></script>
+    <script src="js/custom.js"></script>
+
+    <script src="//code.jivosite.com/widget/TPJI7caesD" async></script>
+  </body>
+</html>
+<style>
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  input:checked + .slider {
+    background-color: #2196f3;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+</style>

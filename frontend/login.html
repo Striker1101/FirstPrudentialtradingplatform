@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <head>
+    <!-- Meta Tag -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>First Prudential Trading Platform ™ | Login Page</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <!-- External CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/owl.theme.default.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/magnific-popup.css"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/css/YTPlayer.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.html" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+    <!-- Color Switcher -->
+    <link href="assets/switcher/switcher.css" rel="stylesheet" />
+    <link href="assets/switcher/style1.css" rel="stylesheet" id="colors" />
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" />
+
+    <style>
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 500px;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+      }
+
+      .title {
+        color: grey;
+        font-size: 18px;
+      }
+
+      a {
+        text-decoration: none;
+        font-size: 22px;
+        color: black;
+      }
+
+      button:hover,
+      a:hover {
+        opacity: 0.7;
+      }
+    </style>
+
+    <!-- custom link -->
+    <!-- one -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <!-- toastify -->
+    <!-- Toastify CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+
+    <!-- Toastify JS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+
+    <!-- axious -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body data-spy="scroll" data-target=".navbar-fixed-top">
+    <!-- Start Preloader Area-->
+    <div class="preloader-area">
+      <div class="sk-cube-grid">
+        <div class="sk-cube sk-cube1"></div>
+        <div class="sk-cube sk-cube2"></div>
+        <div class="sk-cube sk-cube3"></div>
+        <div class="sk-cube sk-cube4"></div>
+        <div class="sk-cube sk-cube5"></div>
+        <div class="sk-cube sk-cube6"></div>
+        <div class="sk-cube sk-cube7"></div>
+        <div class="sk-cube sk-cube8"></div>
+        <div class="sk-cube sk-cube9"></div>
+      </div>
+    </div>
+    <!--/End Preloader Area-->
+    <!-- Navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#main-nav-collapse"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.hmtl"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="main-nav-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="./index.html">Home</a></li>
+            <li>
+              <a class="smoth-scroll" href="./index.html#about-us">About Us</a>
+            </li>
+
+            <li>
+              <a class="smoth-scroll" href="./index.html#conuter">Statistics</a>
+            </li>
+            <li>
+              <a class="smoth-scroll" href="./index.html#our-pricing"
+                >Start Trading</a
+              >
+            </li>
+
+            <li>
+              <a class="smoth-scroll" href="./index.html#contacts"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- /End Navbar -->
+    <!-- Start Header -->
+
+    <section id="testimonial" class="testimonial section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="section-title wow fadeInDown">
+              <h2><span>LOGIN</span></h2>
+              <div class="border-line">
+                <span class="border-box"></span>
+              </div>
+              <p>Login Into Your Dashboard</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <form class="text-left clearfix mt-50" id="login_form">
+              <div class="form-group">
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="password"
+                  name="password"
+                  class="form-control"
+                  placeholder="Password"
+                  required
+                />
+              </div>
+
+              <button
+                type="submit"
+                name="submit"
+                class="btn btn-success"
+                style="color: black"
+              >
+                Login
+              </button>
+            </form>
+            <label
+              ><a href="./register.html"
+                >New here? Click here to open a free account
+              </a>
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <div class="tradingview-widget-copyright">
+        <a href="https://www.tradingview.com" rel="noopener" target="_blank"
+          ><span class="blue-text"></span
+        ></a>
+      </div>
+      <script
+        type="text/javascript"
+        src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+        async
+      >
+          {
+          "symbols": [
+            {
+              "proName": "FOREXCOM:SPXUSD",
+              "title": "S&P 500"
+            },
+            {
+              "proName": "FOREXCOM:NSXUSD",
+              "title": "US 100"
+            },
+            {
+              "proName": "FX_IDC:EURUSD",
+              "title": "EUR/USD"
+            },
+            {
+              "proName": "BITSTAMP:BTCUSD",
+              "title": "BTC/USD"
+            },
+            {
+              "proName": "BITSTAMP:ETHUSD",
+              "title": "ETH/USD"
+            },
+            {
+              "description": "XRPUSD",
+              "proName": "OANDA:XAUUSD"
+            },
+            {
+              "description": "",
+              "proName": "BINANCE:BTCUSDT"
+            },
+            {
+              "description": "SHIB/USDT",
+              "proName": "BINANCE:SHIBUSDT"
+            },
+            {
+              "description": "ETH/USD",
+              "proName": "BITSTAMP:ETHUSD"
+            },
+            {
+              "description": "DOGE/USDT",
+              "proName": "BINANCE:DOGEUSDT"
+            }
+          ],
+          "showSymbolLogo": false,
+          "colorTheme": "dark",
+          "isTransparent": true,
+          "displayMode": "adaptive",
+          "locale": "en"
+        }
+      </script>
+    </div>
+    <!-- TradingView Widget END -->
+    <!-- Footer top Area -->
+    <section id="contacts" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="section-title wow fadeInDown">
+              <h2>Contact <span> US</span></h2>
+              <div class="border-line">
+                <span class="border-box"></span>
+              </div>
+              <p>
+                Our professional expertise allows us to offer you secure returns
+                on investments.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="footer-single-contact">
+              <div class="address-single-contact">
+                <h6>Address:</h6>
+                <p class="company_address"></p>
+              </div>
+              <div class="address-single-contact">
+                <h6>Customer Support</h6>
+                <p>Phone : <span class="phone_number"></span></p>
+                <p>mail : <span class="company_email"></span></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="footer-single-contact">
+              <div class="contact-form">
+                <form id="contact-form" method="post">
+                  <div class="row">
+                    <div class="form-group col-md-6">
+                      <input
+                        type="text"
+                        name="fname"
+                        class="form-control pl-icon"
+                        id="first-name"
+                        placeholder="&#xf2c0; your name"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-md-6">
+                      <input
+                        type="email"
+                        name="email"
+                        class="form-control pl-icon"
+                        id="email"
+                        placeholder="&#xf003; your email"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-md-12">
+                      <input
+                        type="text"
+                        name="subject"
+                        class="form-control pl-icon"
+                        id="subject"
+                        placeholder="&#xf040; your subject"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-md-12">
+                      <textarea
+                        rows="3"
+                        name="message"
+                        class="form-control pl-icon"
+                        id="description"
+                        placeholder="&#xf0e5; your message"
+                        required
+                      ></textarea>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="actions wow fadeIn" data-wow-delay=".4s">
+                        <input
+                          type="submit"
+                          value="send message"
+                          name="submit"
+                          id="submitButton"
+                          class="btn btn-lg contact-btn"
+                          title="Submit Your Message!"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /End Footer top Area -->
+    <!-- footer Area -->
+    <footer id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="footer-buttom">
+              <p>
+                Copyright @2025 Powered by
+                <a href="#"> First Prudential Trading platform </a> All Right
+                Reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- /End Footer Area -->
+
+    <!-- /End Switcher Design Area -->
+    <!-- jQuery js -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- BootStrap js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- OwlCarousel Js  -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Wow js -->
+    <script src="assets/js/wow.min.js"></script>
+    <!-- Parallas Js-->
+    <script src="assets/js/jquery.stellar.min.js"></script>
+    <!-- Smooth Scroll Js -->
+    <script src="assets/js/SmoothScroll.js"></script>
+    <!-- Skill Easypiechart,Inview js -->
+    <script src="assets/js/jquery.easypiechart.min.js"></script>
+    <script src="assets/js/jquery.inview.min.js"></script>
+    <!-- Counterup, Waypoints Js -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <!-- Magnific Popup Js -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- Mixitup Js -->
+    <script src="assets/js/jquery.mixitup.js"></script>
+    <!-- YTPlayer Js -->
+    <script src="assets/js/jquery.mb.YTPlayer.min.js"></script>
+    <!-- Color Switcher js -->
+    <script src="assets/switcher/switcher.js"></script>
+    <!-- Main Custom Js -->
+    <script src="./util/general.js"></script>
+    <script src="./util/apiRequest.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="./assets/js/custom/login.js" defer></script>
+
+    <div class="mgm" style="display: none">
+      <div class="txt">
+        Someone from <b></b> just earned
+        <a href="javascript:void(0);" onclick="javascript:void(0);"></a>
+      </div>
+    </div>
+
+    <style>
+      .mgm {
+        border-radius: 7px;
+        position: fixed;
+        z-index: 90;
+        bottom: 80px;
+        right: 50px;
+        background: #fff;
+        padding: 10px 27px;
+        box-shadow: 0px 5px 13px 0px rgba(0, 0, 0, 0.3);
+      }
+      .mgm a {
+        font-weight: 700;
+        display: block;
+        color: #dea92c;
+      }
+      .mgm a,
+      .mgm a:active {
+        transition: all 0.2s ease;
+        color: #dea92c;
+      }
+    </style>
+
+    <script type="text/javascript">
+      var listCountries = [
+        "Brazil",
+        "USA",
+        "Germany",
+        "France",
+        "Italy",
+        "India",
+        "Australia",
+        "China",
+        "Canada",
+        "Argentina",
+        "Saudi Arabia",
+        "Mexico",
+        "Indonesia",
+        "Egypt",
+        "Venezuela",
+        "Madagascar",
+        "Sweden",
+        "Philippines",
+        "Finland",
+        "Italy",
+        "Ecuador",
+        "United Kingdom",
+        "Belarus",
+        "Greece",
+        "Cuba",
+        "Hungary",
+        "Portugal",
+        "Austria",
+        "Iceland",
+        "Panama",
+        "Croatia",
+        "Denmark",
+        "Netherlands",
+        "Switzerland",
+        "Belgium",
+        "Israel",
+        "Cyprus",
+      ];
+      var listPlans = [
+        "$1000",
+        "$500",
+        "$2000",
+        "$200",
+        "$10000",
+        "$5000",
+        "$6000",
+        "$300",
+        "$1500",
+        "$500",
+      ];
+      interval = Math.floor(Math.random() * (40000 - 8000 + 1) + 8000);
+      var run = setInterval(request, interval);
+
+      function request() {
+        clearInterval(run);
+        interval = Math.floor(Math.random() * (40000 - 8000 + 1) + 8000);
+        var country =
+          listCountries[Math.floor(Math.random() * listCountries.length)];
+        var plan = listPlans[Math.floor(Math.random() * listPlans.length)];
+        var msg =
+          "Someone from <b>" +
+          country +
+          '</b> just earned <a href="javascript:void(0);" onclick="javascript:void(0);">' +
+          plan +
+          " </a>";
+        $(".mgm .txt").html(msg);
+        $(".mgm").stop(true).fadeIn(300);
+        window.setTimeout(function () {
+          $(".mgm").stop(true).fadeOut(300);
+        }, 6000);
+        run = setInterval(request, interval);
+      }
+    </script>
+
+    <!-- Smartsupp Live Chat script -->
+    <script src="//code.jivosite.com/widget/TPJI7caesD" async></script>
+  </body>
+</html>
