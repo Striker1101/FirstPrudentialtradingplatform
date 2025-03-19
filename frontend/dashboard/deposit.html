@@ -182,7 +182,7 @@
                     <div class="clearfix"></div>
                   </a>
                   <ul id="dashboard" class="collapse" data-parent="#sidebarnav">
-                    <li><a href="/">Client Area</a></li>
+                    <li><a href="./index.html">Client Area</a></li>
                     <li><a href="./forex.html">Forex</a></li>
                     <li><a href="./cfd.html">CFD</a></li>
                     <li><a href="./cryptocurrency.html">Cryptocurrency</a></li>
@@ -280,7 +280,9 @@
                   <a href="#" id="logout">
                     <div class="pull-left">
                       <i class="fa-solid fa-unlock"></i
-                      ><span class="right-nav-text">Sign Out</span>
+                      ><span id="logout_user" class="right-nav-text"
+                        >Sign Out</span
+                      >
                     </div>
                     <div class="pull-right"></div>
                     <div class="clearfix"></div>
@@ -306,7 +308,7 @@ wrapper -->
                       <!-- <form method="GET" action="payment-method" style="margin-bottom: 200px; margin-top: 30px;"> -->
                       <form
                         style="margin-bottom: 200px; margin-top: 30px"
-                        id="deposit_form"
+                        id="deposit_type_form"
                       >
                         <div class="form-group">
                           <br />
@@ -328,6 +330,7 @@ wrapper -->
                             <input
                               type="number"
                               name="amount"
+                              id="amount_input"
                               class="form-control amount"
                               placeholder="Amount"
                               required
@@ -371,54 +374,138 @@ wrapper -->
                   <div class="card-body">
                     <div style="margin-bottom: 200px; margin-top: 30px">
                       Deposit Amount<br /><br />
-                      <h6>3000 USD</h6>
+                      <h6>
+                        <span id="amount"> </span>
+                        <span class="currency"></span>
+                      </h6>
                       <br />
                       Please select your payment method <br /><br /><br />
+                      <div id="deposit_type_container"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-                      <!-- <div class="btn-group mr-2" style="width: 40%;">
-                  <a class="button gray btn-block" href="card-deposit.php">Debit Card </a>
-              </div> -->
-                      <div class="btn-group mr-2" style="width: 40%">
-                        <a
-                          class="button gray btn-block"
-                          href="bitcoin-deposit.php"
-                        >
-                          Bitcoin
-                        </a>
-                      </div>
+            <div class="row" id="third" style="display: none">
+              <div
+                class="col-xl-12 mb-30"
+                style="margin: auto; text-align: center"
+              >
+                <div class="card card-statistics mb-30">
+                  <div class="card-body">
+                    <div
+                      class="col-xl-9 col-md-8 col-sm-9 col-11"
+                      style="margin: auto; text-align: center"
+                    >
+                      <br /><br />
+                      <h4>
+                        Fund Your Account via <br />
+                        <span class="type_name"></span>
+                      </h4>
+                      <br /><br />
+                      <!--<h6>Minimum Deposit:&nbsp; $200.00 <br> Maximum Deposit:&nbsp; $50,000.00</h6> <br><br>-->
+
+                      <p>
+                        <i
+                          class="fa-brands fa-ethereum fa-3x"
+                          style="color: #89cff0"
+                        ></i>
+                      </p>
+                      <br />
+                      When making a deposit via
+                      <span class="type_name"></span> please make sure we
+                      receive the correct deposit amount. Depending on your
+                      deposit type the transfer fee may be deducted from the
+                      amount you send and not from your remaining balance. In
+                      this case you need to add your wallet's transfer fee to
+                      the amount sent. In otherwords, you should transfer the
+                      deposit amount PLUS your deposit type network fee. We
+                      recommend checking the exact transfer fee with your
+                      deposit option provider.
+                      <br />
+                      <img src="" id="type_image" alt="" />
                       <br /><br />
 
-                      <!-- <div class="btn-group mr-2" style="width: 40%;">
-                  <a class="button gray btn-block" href="skrill-deposit.php"> Skrill </a>
-              </div>
-              <div class="btn-group mr-2" style="width: 40%;">
-                  <a class="button gray btn-block" href="neteller-deposit.php"> Neteller </a>
-              </div><br><br>
+                      <form id="deposit_form" style="margin-bottom: 200px">
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            value=""
+                            style="display: none"
+                            id="bank_name"
+                            readonly="readonly"
+                          />
+                        </div>
 
-              <div class="btn-group mr-2" style="width: 40%;">
-                  <a class="button gray btn-block" href="paypal-deposit.php"> PayPal </a>
-              </div>
-              <div class="btn-group mr-2" style="width: 40%;">
-                  <a class="button gray btn-block" href="payee-deposit.php"> Payee </a>
-              </div><br><br> -->
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            value=""
+                            style="display: none"
+                            id="account_name"
+                            readonly="readonly"
+                          />
+                        </div>
 
-                      <div class="btn-group mr-2" style="width: 40%">
-                        <a
-                          class="button gray btn-block"
-                          href="ethereum-deposit.php"
+                        <span id="description"></span>
+                        <br /><br />
+
+                        <!-- The text field -->
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            value=""
+                            id="myInput"
+                            readonly="readonly"
+                          />
+                        </div>
+                        <!-- <br><br> -->
+                        <!-- The button used to copy the text -->
+                        <button
+                          onclick="myFunction()"
+                          type="button"
+                          class="btn btn-sm btn-secondary"
                         >
-                          Ethereum
-                        </a>
-                      </div>
-                      <div class="btn-group mr-2" style="width: 40%">
-                        <a
-                          class="button gray btn-block"
-                          href="usdt-deposit.php"
+                          Copy Address
+                        </button>
+
+                        <script>
+                          function myFunction() {
+                            /* Get the text field */
+                            var copyText = document.getElementById("myInput");
+
+                            /* Select the text field */
+                            copyText.select();
+
+                            /* Copy the text inside the text field */
+                            document.execCommand("Copy");
+
+                            /* Alert the copied text */
+                            alert(
+                              "Wallet Address Has Been Copied: " +
+                                copyText.value
+                            );
+                          }
+                        </script>
+
+                        <!--<font style='color: #ff9900'>  </font> -->
+                        <!-- <br><br><br>
+
+              Transfer 300.00 USD in BTC to the wallet address above to finalize your deposit. -->
+                        <br /><br />
+
+                        <button
+                          type="submit"
+                          name="deposit"
+                          class="btn btn-primary"
                         >
-                          Usdt
-                        </a>
-                      </div>
-                      <br /><br />
+                          I Have Paid
+                        </button>
+                      </form>
                     </div>
                   </div>
                 </div>

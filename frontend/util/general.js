@@ -12,9 +12,10 @@ function general_data() {
   };
 }
 
-function successToast(message) {
+function successToast(message, res) {
+  const finalMsg = res?.response?.data?.message || message;
   Toastify({
-    text: message,
+    text: finalMsg,
     duration: 3000,
     close: true,
     gravity: "top",
@@ -23,9 +24,10 @@ function successToast(message) {
   }).showToast();
 }
 
-function errorToast(message) {
+function errorToast(message, err) {
+  const finalMsg = err?.response?.data?.message || message;
   Toastify({
-    text: message,
+    text: finalMsg,
     duration: 3000,
     close: true,
     gravity: "top",

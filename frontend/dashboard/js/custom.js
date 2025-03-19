@@ -1031,32 +1031,72 @@ NOTE: This file contains all scripts for the actual Template.
     const data = window.general_data();
     populateUserContent(_user);
     paintContent();
+    const replacements = [
+      { selector: ".footer_year", value: `@${new Date().getFullYear()}` },
+      { selector: ".company_email", value: data.email },
+      { selector: ".phone_number", value: data.phone_number },
+      { selector: ".display_phone_number", value: data.display_phone_number },
+      { selector: ".company_address", value: data.address },
+    ];
 
-    $(".footer_year").text(`   @${new Date().getFullYear()}  `);
-    $(".company_email").text(data.email);
-    $(".phone_number").text(data.phone_number);
-    $(".display_phone_number").text(data.display_phone_number);
-    $(".company_address").text(data.address);
+    replacements.forEach(({ selector, value }) => {
+      $(selector).each(function () {
+        $(this).text(value);
+      });
+    });
+
+    $("#logout_user").on("click", () => {
+      if (confirm("Are you sure you want to log out?")) {
+        apiRequest
+          .post("logout")
+          .then((res) => {
+            window.successToast("Logout successful!", res);
+            // Redirect to login or homepage if needed
+            setTimeout(() => {
+              window.location.href = "../login.html";
+            }, 1000);
+          })
+          .catch((err) => {
+            window.errorToast("Logout failed!", err);
+          });
+      }
+    });
   });
 
   async function paintContent() {
     try {
       const baseURL = window.general_data().url;
-      const res = await apiRequest.get(`${baseURL}/user/${_user.id}`);
+      const res = await apiRequest.get(`${baseURL}/user/${_user?.id}`);
       const user = res.data;
       populateUserContent(user); // 👈 Call populate here
     } catch (err) {
       console.error("Error fetching user data", err);
+      if (err?.response?.status == 401) {
+        window.errorToast(err?.response?.data?.message || "Error on Upload");
+        setTimeout(() => {
+          window.location.href = "../login.html";
+        }, 2000);
+      }
     }
   }
 
   // 🔥 Populate HTML content by class names
   function populateUserContent(user) {
     const mappings = {
-      account_currency: user.currency_symbol || "",
-      account_balance: user.account?.balance || "0.00",
+      currency: user?.currency || "USD",
+      account_stage: user?.account?.account_stage || "beginner",
+      account_type: user?.account?.account_type?.name || "beginner",
+      account_currency: user?.currency_symbol || "$",
+      account_balance: user?.account?.balance || "0.00",
       footer_year: new Date().getFullYear(),
-      user_name: user.name || "",
+      user_name: user?.name || "Nan",
+      account_earning: user?.account?.earning | "0.00",
+      email: user?.email || "Nan",
+      phone_number: user?.phone_number || "Nan",
+      city: user?.city || "Nan",
+      country: user?.country || "Nan",
+      state: user?.state || "Nan",
+      address: user?.street || "Nan",
     };
 
     // Loop through mappings and populate matching class elements

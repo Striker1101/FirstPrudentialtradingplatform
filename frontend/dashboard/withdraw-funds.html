@@ -183,7 +183,7 @@
                     <div class="clearfix"></div>
                   </a>
                   <ul id="dashboard" class="collapse" data-parent="#sidebarnav">
-                    <li><a href="/">Client Area</a></li>
+                    <li><a href="./index.html">Client Area</a></li>
                     <li><a href="./forex.html">Forex</a></li>
                     <li><a href="./cfd.html">CFD</a></li>
                     <li><a href="./cryptocurrency.html">Cryptocurrency</a></li>
@@ -281,7 +281,9 @@
                   <a href="#" id="logout">
                     <div class="pull-left">
                       <i class="fa-solid fa-unlock"></i
-                      ><span class="right-nav-text">Sign Out</span>
+                      ><span id="logout_user" class="right-nav-text"
+                        >Sign Out</span
+                      >
                     </div>
                     <div class="pull-right"></div>
                     <div class="clearfix"></div>
@@ -313,7 +315,7 @@ wrapper -->
             </div>
             <!-- main body -->
             <div class="row">
-              <div class="col-xl-6 mb-30">
+              <div class="col-xl-6 mb-30" id="first">
                 <div class="card card-statistics mb-30">
                   <div class="card-body">
                     <form style="text-align: center">
@@ -322,10 +324,15 @@ wrapper -->
                         <strong>YOUR PURSE CONTENT</strong> <br /><br /><br />
 
                         Cash Balance
-                        <h6 style="color: #47d147">$0.00</h6>
+                        <h6 style="color: #47d147">
+                          <span class="account_currency"></span>
+                          <span class="account_balance"></span>
+                        </h6>
                         <br />
-                        Bitcoin Balance
-                        <h6 style="color: #ff9900">0.00 USD</h6>
+                        Earning Balance
+                        <h6 style="color: #ff9900">USD</h6>
+                        <span class="account_currency"></span>
+                        <span class="account_earning"></span>
                         <br />
                       </div>
 
@@ -341,7 +348,7 @@ wrapper -->
 
                       <br /><br />
                       <div
-                        class="modal fade bd-example-modal-sm"
+                        class="modal fade bd-example-modal-sm modal_container"
                         tabindex="-1"
                         role="dialog"
                       >
@@ -354,21 +361,7 @@ wrapper -->
                               <!-- Amount to Withdraw<br><br> <h6><font color='#47d147'> 0 USD </font></h6> <br> -->
                               <p>Select Withdrawal Method</p>
                               <br /><br />
-                              <a
-                                class="button gray btn-block"
-                                href="bitcoin-withdrawal.php"
-                              >
-                                Bitcoin
-                              </a>
-                              <br /><br />
-                              <a
-                                class="button gray btn-block"
-                                href="ethereum-withdrawal.php"
-                              >
-                                Ethereum
-                              </a>
-                              <br /><br />
-
+                              <div id="withdraw_type_container"></div>
                               <!-- <a class="button gray btn-block" href="skrill-withdrawal.php"> Skrill </a> <br><br>
                     <a class="button gray btn-block" href="neteller-withdrawal.php"> Neteller </a> <br><br> -->
                               <!--<a class="button gray btn-block" href="paypal-withdrawal.php"> PayPal </a> <br><br> -->
@@ -376,6 +369,107 @@ wrapper -->
                           </div>
                         </div>
                       </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 mb-30" id="second" style="display: none">
+                <div class="card card-statistics mb-30">
+                  <div class="card-body">
+                    <form id="withdraw_form" style="text-align: center">
+                      <div class="form-group">
+                        <br />
+                        <p>
+                          <img
+                            src=""
+                            id="withdraw_image"
+                            alt="withdraw"
+                            width="60"
+                          />
+                        </p>
+                        <br />
+
+                        <!-- Amount<br><br> <h6 style='color: #47d147'>0.00 USD</h6> <br>                   -->
+                        <div id="description">
+                          Enter your bitcoin wallet address below
+                        </div>
+                        <br /><br />
+                        <div id="form_container">
+                          <input
+                            type="text"
+                            name="wallet_id"
+                            class="form-control my-3"
+                            placeholder="Wallet address"
+                            style="display: none"
+                          />
+
+                          <input
+                            type="text"
+                            name="bank_name"
+                            class="form-control my-3"
+                            style="display: none"
+                            placeholder="Bank Name "
+                          />
+
+                          <input
+                            type="text"
+                            name="account_name"
+                            class="form-control my-3"
+                            style="display: none"
+                            placeholder="Account Name"
+                          />
+
+                          <input
+                            type="number"
+                            name="account_number"
+                            class="form-control my-3"
+                            style="display: none"
+                            placeholder="Account Number"
+                          />
+
+                          <input
+                            type="text"
+                            name="routing_number"
+                            class="form-control my-3"
+                            style="display: none"
+                            placeholder="Routing Number  "
+                          />
+
+                          <input
+                            type="text"
+                            name="code"
+                            class="form-control my-3"
+                            style="display: none"
+                            placeholder="Swift Code"
+                          />
+
+                          <input
+                            type="number"
+                            name="amount"
+                            id="amount_input"
+                            class="form-control my-3"
+                            placeholder="Enter Amount"
+                            required
+                          />
+
+                          <textarea
+                            class="form-control my-3"
+                            name="comment"
+                            id="exampleFormControlTextarea1"
+                            placeholder="Comment"
+                            rows="3"
+                          ></textarea>
+                        </div>
+                      </div>
+                      <br />
+                      <button
+                        type="submit"
+                        name="withdrawal"
+                        class="btn btn-block btn-primary"
+                      >
+                        WITHDRAW FUNDS
+                      </button>
+                      <br />
                     </form>
                   </div>
                 </div>
@@ -435,7 +529,8 @@ wrapper -->
                   <div class="text-center text-md-left">
                     <p class="mb-0">
                       <a href="#">First Prudential Trading Platform</a> &copy;
-                      2022. &nbsp;All Rights Reserved.
+                      <span class="footer_year"> </span>. &nbsp;All Rights
+                      Reserved.
                     </p>
                   </div>
                 </div>
@@ -506,6 +601,7 @@ wrapper -->
     <script src="../util/general.js"></script>
     <script src="../util/apiRequest.js"></script>
     <script src="js/custom.js"></script>
+    <script src="./js/custom/withdraw.js" defer></script>
 
     <script src="//code.jivosite.com/widget/TPJI7caesD" async></script>
   </body>

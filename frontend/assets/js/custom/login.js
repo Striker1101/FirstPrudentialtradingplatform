@@ -27,7 +27,7 @@
       const baseURL = window.general_data().url;
       try {
         const res = await apiRequest.post(`${baseURL}/auth/login`, formData);
-        window.successToast("Login successful!");
+        window.successToast("Login successful!", res);
         form[0].reset();
         localStorage.setItem(
           "token",
@@ -39,7 +39,7 @@
         }, 3000);
       } catch (err) {
         console.error("Request failed:", err);
-        window.errorToast("Login failed!");
+        window.errorToast("Login failed!", err);
       } finally {
         btn.text(originalText).prop("disabled", false);
       }

@@ -15,7 +15,6 @@ async function getData() {
 
     if (Array.isArray(plans) && plans.length > 0) {
       const plan_container = $("#plan_container");
-      console.log(plan_container);
       $("#plan_container").empty();
 
       plans.forEach((plan, index) => {

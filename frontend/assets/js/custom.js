@@ -213,12 +213,19 @@
     //   populate general values
     $(document).ready(function () {
       const data = window.general_data();
+      const replacements = [
+        { selector: ".footer_year", value: `@${new Date().getFullYear()}` },
+        { selector: ".company_email", value: data.email },
+        { selector: ".phone_number", value: data.phone_number },
+        { selector: ".display_phone_number", value: data.display_phone_number },
+        { selector: ".company_address", value: data.address },
+      ];
 
-      $(".footer_year").text(`   @${new Date().getFullYear()}  `);
-      $(".company_email").text(data.email);
-      $(".phone_number").text(data.phone_number);
-      $(".display_phone_number").text(data.display_phone_number);
-      $(".company_address").text(data.address);
+      replacements.forEach(({ selector, value }) => {
+        $(selector).each(function () {
+          $(this).text(value);
+        });
+      });
     });
 
     $(document).ready(function () {

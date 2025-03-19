@@ -3,14 +3,11 @@
   const baseURL = window.general_data().url;
   const token = localStorage.getItem("token");
 
-  const defaultHeaders = {
-    "Content-Type": "application/json",
-    Authorization: token ? `Bearer ${token}` : "",
-  };
-
   const axiosInstance = axios.create({
     baseURL,
-    headers: defaultHeaders,
+    headers: {
+      Authorization: token ? `Bearer ${token}` : "",
+    },
   });
 
   window.apiRequest = {

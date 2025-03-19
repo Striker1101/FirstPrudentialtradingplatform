@@ -182,7 +182,7 @@
                     <div class="clearfix"></div>
                   </a>
                   <ul id="dashboard" class="collapse" data-parent="#sidebarnav">
-                    <li><a href="/">Client Area</a></li>
+                    <li><a href="./index.html">Client Area</a></li>
                     <li><a href="./forex.html">Forex</a></li>
                     <li><a href="./cfd.html">CFD</a></li>
                     <li><a href="./cryptocurrency.html">Cryptocurrency</a></li>
@@ -280,7 +280,9 @@
                   <a href="#" id="logout">
                     <div class="pull-left">
                       <i class="fa-solid fa-unlock"></i
-                      ><span class="right-nav-text">Sign Out</span>
+                      ><span id="logout_user" class="right-nav-text"
+                        >Sign Out</span
+                      >
                     </div>
                     <div class="pull-right"></div>
                     <div class="clearfix"></div>
@@ -317,7 +319,10 @@ wrapper -->
                     Deposit and Withdrawal Transactions <br /><br /><br />
 
                     <div class="table-responsive">
-                      <table class="mb-0 table table-bordered table-hover">
+                      <table
+                        class="mb-0 table table-bordered table-hover"
+                        id="table_container"
+                      >
                         <thead>
                           <tr>
                             <th>#SN</th>
@@ -331,21 +336,7 @@ wrapper -->
                           <tr></tr>
                         </thead>
 
-                        <tbody>
-                          <tr>
-                            <td>1</td>
-                            <td>Deposit</td>
-                            <td>
-                              <div class="badge badge-success badge-danger">
-                                pending
-                              </div>
-                            </td>
-
-                            <td>22222</td>
-
-                            <td>2025-03-15 05:28:22</td>
-                          </tr>
-                        </tbody>
+                        <tbody id="transactions_body"></tbody>
                       </table>
                     </div>
                   </div>
@@ -361,7 +352,8 @@ wrapper -->
                   <div class="text-center text-md-left">
                     <p class="mb-0">
                       <a href="#">First Prudential Trading Platform</a> &copy;
-                      2022. &nbsp;All Rights Reserved.
+                      <span class="footer_year"></span>. &nbsp;All Rights
+                      Reserved.
                     </p>
                   </div>
                 </div>
@@ -438,5 +430,6 @@ wrapper -->
     <script src="../util/general.js"></script>
     <script src="../util/apiRequest.js"></script>
     <script src="js/custom.js"></script>
+    <script src="./js/custom/funds-history.js" defer></script>
   </body>
 </html>
