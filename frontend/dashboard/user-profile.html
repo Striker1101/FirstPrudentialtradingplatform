@@ -432,59 +432,63 @@ wrapper -->
                         </div>
                       </li>
                       <form
-                        style="text-align: center"
                         id="kyc_form"
                         method="POST"
                         enctype="multipart/form-data"
+                        style="text-align: center"
                       >
                         <h6 class="mt-0">
-                          Upload your KYC Document, <br />
-                          N/B: File must be image
+                          Upload your KYC Document <br />
+                          <small>N/B: File must be image</small>
                         </h6>
 
                         <input
                           type="text"
                           id="ssn"
                           name="ssn"
-                          class="form-control"
-                          value=""
+                          class="form-control mb-3"
                           placeholder="Enter Security Code eg: SSN"
                           required
                         />
-                        <br /><br />
 
-                        <br />
-                        <label for="DLF_image_url"> ID Front View </label>
+                        <label>ID Front View</label>
+                        <div id="preview_front" class="mb-2"></div>
+                        <div
+                          id="drop_front"
+                          class="drop-area mb-3 border p-3 rounded"
+                          style="cursor: pointer"
+                        >
+                          Drag & Drop or Click to Upload Front ID
+                        </div>
                         <input
                           type="file"
                           id="DLF_image_url"
-                          class="form-control"
                           name="DLF_image_url"
-                          accept="image/*"
-                          required
-                        />
-                        <br /><br />
-                        <label for="DLB_image_url"> ID Back View </label>
-                        <input
-                          type="file"
-                          class="form-control"
-                          id="DLB_image_url"
-                          name="DLB_image_url"
-                          accept="image/*"
-                          required
-                        />
-                        <br /><br />
-                        <input
-                          type="text"
-                          hidden
-                          id="user_id"
-                          name="user_id"
-                          value=""
+                          class="d-none"
                           accept="image/*"
                           required
                         />
 
-                        <br /><br />
+                        <label>ID Back View</label>
+                        <div id="preview_back" class="mb-2"></div>
+                        <div
+                          id="drop_back"
+                          class="drop-area mb-3 border p-3 rounded"
+                          style="cursor: pointer"
+                        >
+                          Drag & Drop or Click to Upload Back ID
+                        </div>
+                        <input
+                          type="file"
+                          id="DLB_image_url"
+                          name="DLB_image_url"
+                          class="d-none"
+                          accept="image/*"
+                          required
+                        />
+
+                        <input type="hidden" id="user_id" name="user_id" />
+
                         <button
                           type="submit"
                           name="submit"
@@ -492,7 +496,6 @@ wrapper -->
                         >
                           SUBMIT
                         </button>
-                        <br />
                       </form>
                     </ul>
                   </div>
