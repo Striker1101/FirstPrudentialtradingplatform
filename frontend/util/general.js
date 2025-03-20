@@ -2,8 +2,8 @@ function general_data() {
   const date = new Date();
   return {
     email: "support@firstprudentialtradingplatform.com",
-    display_phone_number: "0492 323 233",
-    phone_number: "0903232334",
+    display_phone_number: "+17829071329",
+    phone_number: "+17829071329",
     address: "Las Vegas United States.",
     date: `${date.toISOString()}`,
     name: "First Prudential Trading Platform",
