@@ -1,13 +1,13 @@
 function general_data() {
   const date = new Date();
   return {
-    email: "support@fegure.com",
+    email: "support@firstprudentialtradingplatform.com",
     display_phone_number: "0492 323 233",
     phone_number: "0903232334",
-    address: "no 445 new area new city",
+    address: "Las Vegas United States.",
     date: `${date.toISOString()}`,
     name: "First Prudential Trading Platform",
-    url: "http://127.0.0.1:8000/api",
+    url: "https://admin.asskunya.com/api",
     owner_id: "1",
   };
 }
