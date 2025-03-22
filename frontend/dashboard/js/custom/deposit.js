@@ -65,6 +65,11 @@
           $("#myInput").prop("value", type.details?.wallet_address);
           break;
 
+        case "paypal":
+          description.text = `Destination ${type.name} Wallet`;
+          $("#myInput").prop("value", type.details?.paypal_email);
+          break;
+
         case "bank_transfer":
           description.text = `Destination ${type.name} Account`;
           $("#bank_name").prop("value", type.details?.bank_name);
