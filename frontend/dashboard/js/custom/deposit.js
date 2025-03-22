@@ -43,8 +43,8 @@
     $("#deposit_type_form").on("submit", function (e) {
       e.preventDefault();
       $("#first").css("display", "none");
-      $("#second").css("display", "block");
-      $("#amount").text($("#amount_input").val());
+      $("#second").css("display", "none");
+      $("#third").css("display", "block");
     });
 
     // Click handler for deposit type buttons
@@ -53,21 +53,24 @@
       const type = $(this).data("type");
 
       $("#second").css("display", "none");
-      $("#third").css("display", "block");
+      $("#third").css("display", "none");
+      $("#first").css("display", "block");
 
       $(".type_name").text(type.name);
       $("#type_image").prop("src", type.image);
-
+      console.log(type);
       const description = $("#description");
       switch (type.type.toLowerCase()) {
         case "crypto":
           description.text = `Destination ${type.name} Wallet`;
           $("#myInput").prop("value", type.details?.wallet_address);
+          $("#deposit_currency").text(type.symbol);
           break;
 
         case "paypal":
           description.text = `Destination ${type.name} Wallet`;
           $("#myInput").prop("value", type.details?.paypal_email);
+          $("#deposit_currency").text(type.symbol);
           break;
 
         case "bank_transfer":
@@ -77,7 +80,7 @@
           $("#account_name").prop("value", type.details?.account_name);
           $("#account_name").css("display", "block");
           $("#myInput").prop("value", type.details?.account_number);
-
+          $("#deposit_currency").text(type.symbol);
           break;
 
         default:
@@ -87,6 +90,7 @@
 
     $("#deposit_form").on("submit", async function (e) {
       e.preventDefault();
+
       const newData = {
         deposit_type_id: deposit_type.id,
         user_id: user.id,
@@ -94,13 +98,13 @@
         currency: user.currency,
         owner_referral_id: user.owner_referral_id,
       };
-      console.log("newData", newData, $("#amount_input").val());
+      // console.log("newData", newData, $("#amount_input").val());
       await apiRequest
         .post(`${baseURL}/deposit`, newData)
         .then((res) => {
           console.log(res);
           window.successToast("Deposit successful!");
-
+          $("#amount_input").prop("value", "");
           setTimeout(() => {
             window.location.href = "../dashboard/funds-history.html";
           }, 2000);

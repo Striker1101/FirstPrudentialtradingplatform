@@ -297,7 +297,7 @@
 wrapper -->
           <div class="content-wrapper">
             <!-- main body -->
-            <div class="row" id="first">
+            <div class="row" id="first" style="display: none">
               <div class="col-xl-12 mb-30">
                 <div class="card card-statistics mb-30">
                   <div class="card-body">
@@ -322,10 +322,9 @@ wrapper -->
                           Set your deposit amount and click 'Next'
                           <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                              <span
-                                class="input-group-text account_currency"
-                                id="basic-addon1"
-                              ></span>
+                              <span class="input-group-text" id="basic-addon1">
+                                <span id="deposit_currency"></span>
+                              </span>
                             </div>
                             <input
                               type="number"
@@ -368,16 +367,11 @@ wrapper -->
               </div>
             </div>
 
-            <div class="row" id="second" style="display: none">
+            <div class="row" id="second">
               <div class="col-xl-12 mb-30" style="text-align: center">
                 <div class="card card-statistics mb-30">
                   <div class="card-body">
                     <div style="margin-bottom: 200px; margin-top: 30px">
-                      Deposit Amount<br /><br />
-                      <h6>
-                        <span id="amount"> </span>
-                        <span class="currency"></span>
-                      </h6>
                       <br />
                       Please select your payment method <br /><br /><br />
                       <div id="deposit_type_container"></div>
@@ -485,10 +479,7 @@ wrapper -->
                             document.execCommand("Copy");
 
                             /* Alert the copied text */
-                            alert(
-                              "Wallet Address Has Been Copied: " +
-                                copyText.value
-                            );
+                            alert("Copied: " + copyText.value);
                           }
                         </script>
 
@@ -501,6 +492,7 @@ wrapper -->
                         <button
                           type="submit"
                           name="deposit"
+                          id="submit_deposit"
                           class="btn btn-primary"
                         >
                           I Have Paid
